@@ -8,10 +8,10 @@ const Genre = ({data}) => {
   return (
     <div className='genres'>
       {
-        data?.map((g) => {
+        data?.map((g,id) => {
           if(!genres[g]?.name) return;
           return (
-            <div className="genre">
+            <div className="genre" key={id}>
               {genres[g]?.name}
             </div>
           )
